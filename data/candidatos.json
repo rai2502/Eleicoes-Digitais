@@ -1,0 +1,10 @@
+{
+  "evento": "Grêmio Estudantil 2026",
+  "candidatos": [
+    {"numero": 10, "nome": "Juntos pela Escola", "emoji": "🎓", "lema": "A voz do estudante em ação dentro e fora da sala.", "propostas": ["Mais eventos culturais e acadêmicos", "Melhoria do ambiente escolar e da sinalização", "Ações de apoio ao bem-estar estudantil"]},
+    {"numero": 20, "nome": "Voz Estudantil", "emoji": "📢", "lema": "Representatividade, escuta e projetos que atendem ao cotidiano.", "propostas": ["Canais permanentes de diálogo com a direção", "Ações de mobilização e participação estudantil", "Projetos para melhoria da vida escolar"]},
+    {"numero": 30, "nome": "Ação e Futuro", "emoji": "🚀", "lema": "Inovação com responsabilidade social e protagonismo jovem.", "propostas": ["Laboratórios e oficinas de tecnologia e pesquisa", "Projetos de empreendedorismo estudantil", "Parcerias para eventos e feiras de conhecimento"]},
+    {"numero": 40, "nome": "União Estudantil", "emoji": "🤝", "lema": "Fortalecer a comunidade escolar com inclusão e participação.", "propostas": ["Programas de acolhimento e inclusão", "Atividades de esporte, arte e cultura", "Projetos de convivência e convivência escolar"]}
+  ],
+  "votosIniciais": {"10": 14, "20": 18, "30": 9, "40": 11}
+}

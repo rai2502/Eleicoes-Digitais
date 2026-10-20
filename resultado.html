@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Apuração · Grêmio Estudantil 2026</title>
+<meta name="description" content="Resultado simulado da eleição do grêmio estudantil.">
+<meta name="theme-color" content="#101828">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css?v=3">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&display=swap">
+</head>
+<body data-page="resultado">
+<header class="top">
+  <a class="brand" href="index.html"><img src="assets/icon.svg" alt="" width="32" height="32"> Grêmio 2026</a>
+  <nav aria-label="Principal"><a href="index.html#candidatos">Candidatos</a><a href="index.html#votar">Votar</a><a href="resultado.html" aria-current="page">Resultado</a></nav>
+  <span id="conexao" class="badge" role="status" data-on="true">Online</span>
+</header>
+<main>
+  <section class="hero">
+    <h1>Apuração</h1>
+    <p class="lead" id="resumo">Carregando…</p>
+  </section>
+  <section aria-labelledby="t-res">
+    <h2 id="t-res">Votos por chapa</h2>
+    <ol id="barras" class="barras" aria-live="polite"></ol>
+    <p id="pendentes" class="msg" role="status"></p>
+    <p class="nota">A sincronização guarda o voto no aparelho quando você está sem internet e o envia depois, quando a conexão volta. Por isso, votos pendentes só entram na apuração após a sincronização.</p>
+  </section>
+</main>
+<footer>Prof. Leandro Gaudio Rosa · Desenvolvimento de Sistemas · Projeto Eleições Digitais</footer>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+<script src="db.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

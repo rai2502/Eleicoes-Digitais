@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Eleição do Grêmio Estudantil 2026</title>
+<meta name="description" content="Eleição simulada para escolher o grêmio estudantil. Funciona mesmo sem internet.">
+<meta name="theme-color" content="#101828">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/icon-192.png">
+<link rel="dns-prefetch" href="//fonts.googleapis.com">
+<link rel="dns-prefetch" href="//fonts.gstatic.com">
+<link rel="preload" href="style.css?v=3" as="style">
+<link rel="prefetch" href="resultado.html">
+<link rel="stylesheet" href="style.css?v=3">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&display=swap">
+</head>
+<body data-page="home">
+<a class="skip" href="#votar">Ir para a votação</a>
+<header class="top">
+  <a class="brand" href="index.html"><img src="assets/icon.svg" alt="" width="32" height="32"> Grêmio 2026</a>
+  <nav aria-label="Principal">
+    <a href="#candidatos">Candidatos</a>
+    <a href="#votar">Votar</a>
+    <a href="resultado.html">Resultado</a>
+    <a href="#painel">Painel</a>
+  </nav>
+  <span id="conexao" class="badge" role="status" data-on="true">Online</span>
+</header>
+
+<main>
+  <section class="hero">
+    <p class="kicker">Eleição simulada · Grêmio Estudantil 2026</p>
+    <h1>Quem vai representar os estudantes?</h1>
+    <p class="lead">Conheça as propostas das chapas, vote uma vez e acompanhe a apuração. Se a internet cair, o app continua abrindo e guarda seu voto para enviar depois.</p>
+    <p class="nota">Atividade educacional: nenhum dado pessoal é coletado. É uma simulação para fins de aprendizado.</p>
+  </section>
+
+  <section id="candidatos" aria-labelledby="t-cand">
+    <h2 id="t-cand">Candidatos e propostas</h2>
+    <div id="lista-candidatos" class="grid" aria-live="polite"><p>Carregando candidatos…</p></div>
+  </section>
+
+  <section id="votar" aria-labelledby="t-voto">
+    <h2 id="t-voto">Seu voto</h2>
+    <form id="form-voto" novalidate>
+      <fieldset id="opcoes"><legend>Escolha uma chapa</legend></fieldset>
+      <button type="submit" class="btn primario" id="btn-votar">Confirmar voto</button>
+    </form>
+    <p id="msg-voto" class="msg" role="status" aria-live="polite"></p>
+  </section>
+
+  <section id="painel" aria-labelledby="t-painel">
+    <h2 id="t-painel">Painel de funcionamento</h2>
+    <div class="painel">
+      <div class="caixa">
+        <h3>Fila de sincronização</h3>
+        <p><strong id="fila-qtd">0</strong> voto(s) pendente(s)</p>
+        <p class="nota">Essa parte serve para guardar o voto no aparelho quando estiver offline e enviar depois, quando a internet voltar. Assim o app continua funcionando sem perder o voto.</p>
+        <button class="btn" id="btn-sync" type="button">Sincronizar agora</button>
+      </div>
+      <div class="caixa">
+        <h3>Notificações</h3>
+        <p id="notif-estado">Permissão: …</p>
+        <button class="btn" id="btn-notif" type="button">Ativar notificações</button>
+        <div class="linha">
+          <button class="btn peq" type="button" data-push data-body="Nova proposta publicada para o Grêmio Estudantil." data-url="index.html#candidatos">Nova proposta</button>
+          <button class="btn peq" type="button" data-push data-body="Apuração disponível. Veja o resultado parcial." data-url="resultado.html">Apuração</button>
+          <button class="btn peq" type="button" data-push data-body="Eleição encerrada. Obrigado por votar!" data-url="resultado.html">Encerrada</button>
+        </div>
+      </div>
+      <div class="caixa">
+        <h3>Testes</h3>
+        <p>Reinicie a simulação para repetir a demonstração.</p>
+        <button class="btn perigo" id="btn-reset" type="button">Reiniciar simulação</button>
+      </div>
+    </div>
+  </section>
+</main>
+<footer>Equipe Pânico de Dados 💀 · Projeto Eleições Digitais</footer>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+<script src="db.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

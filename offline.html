@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sem conexão</title>
+  <meta name="theme-color" content="#101828">
+  <link rel="stylesheet" href="style.css?v=3">
+  <style>
+    body.offline-body {
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      background:
+        radial-gradient(circle at top, rgba(90,169,255,.18), transparent 30%),
+        radial-gradient(circle at bottom right, rgba(140,91,255,.15), transparent 28%),
+        linear-gradient(135deg, #060d18 0%, #0e1a2c 100%);
+    }
+
+    .offline-card {
+      max-width: 620px;
+      margin: 2rem;
+      padding: 2.2rem 2rem;
+      border-radius: 26px;
+      border: 1px solid rgba(255,255,255,.08);
+      background: rgba(12, 20, 31, 0.88);
+      box-shadow: 0 30px 80px rgba(2,8,18,.5);
+    }
+
+    .offline-card h1 {
+      margin-top: 0;
+    }
+  </style>
+</head>
+<body class="offline-body">
+  <main class="offline-card">
+    <section class="hero" style="margin:0;padding:0;border:none;background:none;box-shadow:none;">
+      <p class="kicker">Offline</p>
+      <h1>Você está sem conexão</h1>
+      <p class="lead">Esta página ainda não foi salva no seu aparelho. Volte à tela inicial: candidatos, propostas e votação continuam funcionando mesmo sem internet.</p>
+      <a class="btn primario" href="index.html">Voltar ao início</a>
+    </section>
+  </main>
+</body>
+</html>
